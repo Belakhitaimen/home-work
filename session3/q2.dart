@@ -4,29 +4,28 @@ displaying items. Use functions with return types and optional/named parameters.
 handle possible null values */
 
 void main() {
-  List<String> groceryList = [
-    'coffee',
-    'tea',
-    'candies',
-    'nuts',
-    'snack mixes',
-  ];
-  groceryList.add('seafood');
-  groceryList.remove('nuts');
-  print('Grocery items : $groceryList');
-
-  addGroceryItems(groceryList: groceryList, items: '');
-  print('Updated Grocery List: $groceryList');
+  List<String> groceryList = [];
+  String item = 'Milk';
+  var isAQdded = addGroceryItems(item, groceryList);
+  print(groceryList);
+  print(item);
 }
 
-//String addGroceryItems({required String items}) {
-//  String updateGroceryitems = items;
-//  return updateGroceryitems;
-//}
+bool addGroceryItems(String? item, List<String> List) {
+  if (item != null) {
+    List.add(item);
+    return true;
+  } else {
+    return false;
+  }
+}
 
-void addGroceryItems({
-  required List<String> groceryList,
-  required String items,
-}) {
-  groceryList.add(items);
+void removeGroceryItems(String item, List<String> List) {
+  List.remove(item);
+}
+
+void desplayGroceryItems(String item, List<String> List) {
+  for (String item in List) {
+    print(item);
+  }
 }
