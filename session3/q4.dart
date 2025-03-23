@@ -12,9 +12,10 @@ void main() {
     print('  Humidity: ${data[1]}%');
     print('  Wind Speed: ${data[2]} km/h');
   });
-  String cityname =cityName();
+  String cityname = cityName();
 }
-String cityName (){
-  String cityname = ;
+
+String cityName() {
+  String cityname;
   return cityname;
 }
