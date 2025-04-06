@@ -4,7 +4,6 @@ import 'dart:io';
 Write a function that takes two numbers and an operator (+, -, *, /) as input and returns the result.
 Handle cases where division by zero might occur.
  */
-import 'dart:io';
 
 void main() {
   print('Enter the first number:');
